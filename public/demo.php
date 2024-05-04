@@ -1,18 +1,14 @@
+<?php
+$movies = ['Les Aventuriers de l\'arche perdue' => ['john',  'marie',  'anthony'],
+'Indiana Jones et le Temple maudit' => ['dieasel',  'arnold','stalone'],
+'Indiana Jones et la Dernière Croisade' => ['casimiro',  'anacleto', 'tibursion']
+];
 
-  <?php
+foreach($movies as $title => $actors){
+  echo "Dans le filme $title, les principaux acteurs sont:<br>";
 
-$weapons = ['pistola', 'canhao','faca'];
-
-$weapons[] = 'bazucadasakjh';
-echo count($weapons);
-echo'<br>';
-echo strlen($weapons[0]);
-echo'<br>';
-$sortedWeapons = sort($weapons);
-echo $sortedWeapons;
-echo'<br>';
-echo'<br>';
-var_dump($weapons);
-echo'<br>';
-var_dump(in_array('faca', $weapons));
+  for ($i = 0; $i < count($actors); $i = $i + 1){
+    echo "- $actors[$i] <br>";
+  }
+}
 ?>
