@@ -1,14 +1,15 @@
 <?php
-$movies = ['Les Aventuriers de l\'arche perdue' => ['john',  'marie',  'anthony'],
-'Indiana Jones et le Temple maudit' => ['dieasel',  'arnold','stalone'],
-'Indiana Jones et la Dernière Croisade' => ['casimiro',  'anacleto', 'tibursion']
-];
+$weapons = ['fists', 'whip', 'gun'];
+$opponentWeapon = $weapons[rand(0,2)]; // Cela permet de choisir une arme de manière aléatoire.
 
-foreach($movies as $title => $actors){
-  echo "Dans le filme $title, les principaux acteurs sont:<br>";
 
-  for ($i = 0; $i < count($actors); $i = $i + 1){
-    echo "- $actors[$i] <br>";
-  }
-}
+// TODO
+
+$indiWeapon = match($opponentWeapon){
+  'fists' => 'gun',
+  'gun' =>  'whip',
+  default => 'fists'
+};
+
+echo "The opponent weapon is a: $opponentWeapon and Indiana Jones weapon is: $indiWeapon"
 ?>
