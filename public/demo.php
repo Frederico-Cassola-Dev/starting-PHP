@@ -1,15 +1,7 @@
 <?php
-$weapons = ['fists', 'whip', 'gun'];
-$opponentWeapon = $weapons[rand(0,2)]; // Cela permet de choisir une arme de manière aléatoire.
 
+function writeSecretSentence (string $animal, string $element): string {
+  return "$animal s'incline face à l'$element";
+}
 
-// TODO
-
-$indiWeapon = match($opponentWeapon){
-  'fists' => 'gun',
-  'gun' =>  'whip',
-  default => 'fists'
-};
-
-echo "The opponent weapon is a: $opponentWeapon and Indiana Jones weapon is: $indiWeapon"
-?>
+echo writeSecretSentence('chat', 'air');
